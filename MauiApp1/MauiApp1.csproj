@@ -64,4 +64,12 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="View\Common\Test.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="View\Common\Test.xib" />
+    </ItemGroup>
+
 </Project>

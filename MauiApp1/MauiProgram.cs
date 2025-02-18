@@ -2,6 +2,11 @@
 
 namespace MauiApp1;
 
+/// <summary>
+///		Dotnet Maui Program
+///		.NET MAUIのエントリーポイントとして機能するクラス
+///		主に依存関係の注入や、アプリケーションの設定を行う
+/// </summary>
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!-- Shell の使用方法
+    アプリケーションのナビゲーションを簡素化するために使用される
+    タブバー、フライアウトメニューなどのナビゲーション要素を提供する
+    
+    FlyoutBehavior属性を使用して、フライアウトメニューの表示方法を指定することもできる
+ -->
 <Shell
     x:Class="MauiApp1.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -6,7 +12,12 @@
     xmlns:local="clr-namespace:MauiApp1"
     Shell.FlyoutBehavior="Flyout"
     Title="MauiApp1">
-
+    <!-- 
+        ShellContent の使用方法
+        ナビゲーションの各ページを定義する
+        ContentTemplate属性を使用して表示するページを指定する
+        ContentTemplateを指定することで、クリックイベントをC#側で定義する必要がなくなる
+     -->
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
