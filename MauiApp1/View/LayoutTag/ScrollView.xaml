@@ -2,21 +2,27 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1.View.Common"
              x:Class="MauiApp1.View.LayoutTag.ScrollView">
+    
     <ContentPage.Content>
         <ScrollView>
-            <ListView ItemsSource="{Binding Path=Rows}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding Name}" />
-                                <Label Text="{Binding Description}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <!-- GpuUsageは親のStackLayoutの HorizontalOptionsは適用されない ContentViewはコンテナ化されており、どこからインポートされても同じ状態を保っている -->
+                <local:GpuUsage/>
+                <ListView ItemsSource="{Binding Path=Rows}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Description}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

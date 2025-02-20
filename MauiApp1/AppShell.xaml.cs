@@ -2,11 +2,18 @@
 
 namespace MauiApp1;
 
+/// <summary>
+///  アプリケーションのナビゲーションを簡素化するために使用されるコンポーネント。
+/// 複雑なナビゲーション構造を簡単に構築できる
+/// </summary>
 public partial class AppShell : Shell
 {
 	private readonly LoadingPage _loadingPage = new();
 	private bool _isNavigating = false;
-
+	/// <summary>
+	/// コンストラクタ
+	/// NavigatingイベントとNavigatedイベントを追加している
+	/// </summary>
 	public AppShell()
 	{
 		InitializeComponent();
